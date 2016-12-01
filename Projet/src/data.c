@@ -32,6 +32,7 @@ const unsigned int get_width(const t_map_data* data)
 void set_width(t_map_data* data, const unsigned int width)
 {
   (*data).width = width;
+}
 
 typedef struct s_map_obj
 {
