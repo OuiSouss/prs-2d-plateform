@@ -18,5 +18,5 @@ if (OPENMP_FOUND)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
 endif()
 
-add_executable(game src/mapio.c)
+add_executable(game src/mapio.c src/tempo.c)
 target_link_libraries(game SDL2_image SDL2_mixer SDL2 ${PROJECT_SOURCE_DIR}/lib/libgame.a)
