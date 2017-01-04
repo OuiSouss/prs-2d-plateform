@@ -74,7 +74,6 @@ void free_objs_md(t_obj** objs)
 void do_save (char *filename)
 {
     int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-    printf("onche '%d' '%s'\n", fd, filename);
     if (fd != -1)
     {
         t_metadata* md = pack_metadata();
