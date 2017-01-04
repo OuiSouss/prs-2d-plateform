@@ -7,6 +7,8 @@
 #include "map.h"
 #include "error.h"
 
+#include <save_file.h>
+
 #ifdef PADAWAN
 
 void map_new (unsigned width, unsigned height)
@@ -44,8 +46,9 @@ void map_new (unsigned width, unsigned height)
 
 void map_save (char *filename)
 {
-  // TODO
-  fprintf (stderr, "Sorry: Map save is not yet implemented\n");
+  do_save(filename);
+// TODO
+//  fprintf (stderr, "Sorry: Map save is not yet implemented\n");
 }
 
 void map_load (char *filename)

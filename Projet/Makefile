@@ -14,7 +14,7 @@ DEPENDS := $(SOURCES:src/%.c=deps/%.d)
 
 MAKEFILES := Makefile
 
-CUSTOM_OBJ := obj/mapio.o
+CUSTOM_OBJ := obj/mapio.o obj/map_file_io.o obj/metadata_file_io.o obj/obj_file_io.o obj/save_file.o
 LIB	:= lib/libgame.a
 
 #CC=gcc
@@ -22,6 +22,7 @@ CFLAGS := -O3 -g -std=c99 -Wall -Wno-unused-function
 CFLAGS += -DPADAWAN
 CFLAGS += -I./include
 CFLAGS += $(shell pkg-config SDL2_image SDL2_mixer --cflags)
+LDFLAGS := -no-pie
 LDLIBS := $(shell pkg-config SDL2_image SDL2_mixer --libs)
 
 $(OBJECTS): $(MAKEFILES)
