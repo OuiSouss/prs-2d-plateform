@@ -97,3 +97,8 @@ t_obj* pack_obj(int i)
     set_attr(obj, attr);
     return obj;
 }
+
+void unpack_obj(t_obj* obj)
+{
+    map_object_add((*obj).path, (*obj).nb_sprites, (*obj).attr);
+}

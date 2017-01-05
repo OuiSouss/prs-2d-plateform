@@ -60,3 +60,13 @@ t_objs_md* pack_objs_md(t_metadata* md)
     }
     return objs_md;
 }
+
+void unpack_objs_md(t_objs_md* objs_md)
+{
+    map_object_begin((*objs_md).nb_objs);
+    for (unsigned int i = 0; i < (*objs_md).nb_objs; ++i)
+    {
+        unpack_obj((*objs_md).objs[i]);
+    }
+    map_object_end();
+}

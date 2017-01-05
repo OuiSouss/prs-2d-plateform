@@ -82,3 +82,8 @@ t_metadata* pack_metadata()
     set_nb_objs(md, map_objects());
     return md;
 }
+
+void unpack_metadata(t_metadata* md)
+{
+    map_allocate((int) (*md).width, (int) (*md).height);
+}

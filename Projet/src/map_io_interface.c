@@ -76,3 +76,15 @@ t_map_md* pack_map_md(t_metadata* md)
     }
     return map_md;
 }
+
+void unpack_map_md(t_map_md* map_md)
+{
+    for (int j = 0; j < (*map_md).height; ++j)
+    {
+        for (int i = 0; i < (*map_md).width; ++i)
+        {
+            int val = get_pos(map_md, i, j);
+            map_set(i,j, val);
+        }
+    }
+}

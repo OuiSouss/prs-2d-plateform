@@ -15,7 +15,7 @@ DEPENDS := $(SOURCES:src/%.c=deps/%.d)
 MAKEFILES := Makefile
 
 CUSTOM_OBJ := obj/mapio.o
-CUSTOM_OBJ += obj/metadata_io_interface.o obj/map_io_interface.o obj/obj_io_interface.o obj/objs_io_interface.o obj/save_file.o
+CUSTOM_OBJ += obj/metadata_io_interface.o obj/map_io_interface.o obj/obj_io_interface.o obj/objs_io_interface.o obj/file_io_interface.o
 LIB	:= lib/libgame.a
 
 #CC=gcc

@@ -19,5 +19,6 @@ unsigned int get_nb_objs(t_metadata* md);
 void set_nb_objs(t_metadata* md, unsigned int nb_objs);
 
 t_metadata* pack_metadata();
+void unpack_metadata(t_metadata* md);
 
 #endif /* _METADATA_IO_INTERFACE_H */

@@ -19,5 +19,6 @@ int get_attr(t_obj* obj);
 void set_attr(t_obj* obj, int attr);
 
 t_obj* pack_obj(int i);
+void unpack_obj(t_obj* obj);
 
 #endif /* _OBJ_IO_INTERFACE_H */

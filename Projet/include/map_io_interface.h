@@ -15,5 +15,6 @@ int get_pos(t_map_md* map_md, int x, int y);
 void set_pos(t_map_md* map_md, int x, int y, int val);
 
 t_map_md* pack_map_md(t_metadata* md);
+void unpack_map_md(t_map_md* map_md);
 
 #endif /* _MAP_IO_INTERFACE_H */

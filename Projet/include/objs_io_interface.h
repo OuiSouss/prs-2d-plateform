@@ -12,5 +12,6 @@ void read_objs_md(const int fd, t_objs_md* objs_md);
 void write_objs_md(int fd, t_objs_md* objs_md);
 
 t_objs_md* pack_objs_md(t_metadata* md);
+void unpack_objs_md(t_objs_md* objs_md);
 
 #endif /* _OBJS_IO_INTERFACE_H */
