@@ -74,6 +74,8 @@ void set_nb_objs(t_metadata* md, unsigned int nb_objs)
     (*md).nb_objs = nb_objs;
 }
 
+#ifdef PADAWAN
+
 t_metadata* pack_metadata()
 {
     t_metadata* md = alloc_md();
@@ -87,3 +89,5 @@ void unpack_metadata(t_metadata* md)
 {
     map_allocate((int) (*md).width, (int) (*md).height);
 }
+
+#endif /* PADAWAN */
