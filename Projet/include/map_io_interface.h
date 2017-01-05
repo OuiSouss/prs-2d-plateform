@@ -1,5 +1,7 @@
-#ifndef _MAP_FILE_IO_H
-# define _MAP_FILE_IO_H
+#ifndef _MAP_IO_INTERFACE_H
+# define _MAP_IO_INTERFACE_H
+
+# include <metadata_io_interface.h>
 
 typedef struct s_map_md t_map_md;
 
@@ -12,4 +14,6 @@ int write_map_md(int fd, const t_map_md* map_md);
 int get_pos(t_map_md* map_md, int x, int y);
 void set_pos(t_map_md* map_md, int x, int y, int val);
 
-#endif /* _MAP_FILE_IO_H */
+t_map_md* pack_map_md(t_metadata* md);
+
+#endif /* _MAP_IO_INTERFACE_H */

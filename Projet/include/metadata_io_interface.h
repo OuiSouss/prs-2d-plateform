@@ -1,5 +1,5 @@
-#ifndef _METADATA_FILE_IO_H
-# define _METADATA_FILE_IO_H
+#ifndef _METADATA_IO_INTERFACE_H
+# define _METADATA_IO_INTERFACE_H
 
 typedef struct s_metadata t_metadata;
 
@@ -18,4 +18,6 @@ void set_height(t_metadata* md, unsigned int height);
 unsigned int get_nb_objs(t_metadata* md);
 void set_nb_objs(t_metadata* md, unsigned int nb_objs);
 
-#endif /* _METADATA_FILE_IO_H */
+t_metadata* pack_metadata();
+
+#endif /* _METADATA_IO_INTERFACE_H */

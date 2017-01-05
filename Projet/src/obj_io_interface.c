@@ -3,6 +3,8 @@
 #include <string.h>
 #include <unistd.h>
 
+#include <map.h>
+
 #define MAX_PATH_LENGTH 256
 
 struct s_obj
@@ -81,4 +83,17 @@ int get_attr(t_obj* obj)
 void set_attr(t_obj* obj, int attr)
 {
     (*obj).attr = attr;
+}
+
+t_obj* pack_obj(int i)
+{
+    t_obj* obj = alloc_obj();
+    set_path(obj, map_get_name(i));
+    set_nb_sprites(obj, map_get_frames(i));
+    int attr = map_get_solidity(i);
+    attr |= map_is_destructible(i);
+    attr |= map_is_collectible(i);
+    attr |= map_is_generator(i);
+    set_attr(obj, attr);
+    return obj;
 }

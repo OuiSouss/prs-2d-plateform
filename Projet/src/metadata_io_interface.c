@@ -73,3 +73,12 @@ void set_nb_objs(t_metadata* md, unsigned int nb_objs)
 {
     (*md).nb_objs = nb_objs;
 }
+
+t_metadata* pack_metadata()
+{
+    t_metadata* md = alloc_md();
+    set_width(md, map_width());
+    set_height(md, map_height());
+    set_nb_objs(md, map_objects());
+    return md;
+}

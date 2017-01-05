@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include <map.h>
+
+#include <metadata_io_interface.h>
+
 struct s_map_md
 {
     int width;
@@ -58,4 +62,17 @@ int get_pos(t_map_md* map_md, int x, int y)
 void set_pos(t_map_md* map_md, int x, int y, int val)
 {
     (*map_md).map[y * (*map_md).width + x] = val;
+}
+
+t_map_md* pack_map_md(t_metadata* md)
+{
+    t_map_md* map_md = alloc_map_md(get_width(md), get_height(md));
+    for (unsigned int j = 0; j < get_height(md); ++j)
+    {
+        for (unsigned int i = 0; i < get_width(md); ++i)
+        {
+            set_pos(map_md, i, j, map_get(i, j));
+        }
+    }
+    return map_md;
 }

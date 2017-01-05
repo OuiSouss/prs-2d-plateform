@@ -1,5 +1,5 @@
-#ifndef _OBJ_FILE_IO_H
-# define _OBJ_FILE_IO_H
+#ifndef _OBJ_IO_INTERFACE_H
+# define _OBJ_IO_INTERFACE_H
 
 typedef struct s_obj t_obj;
 
@@ -18,4 +18,6 @@ void set_nb_sprites(t_obj* obj, int nb_sprites);
 int get_attr(t_obj* obj);
 void set_attr(t_obj* obj, int attr);
 
-#endif /* _OBJ_FILE_IO_H */
+t_obj* pack_obj(int i);
+
+#endif /* _OBJ_IO_INTERFACE_H */
